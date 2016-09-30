@@ -24,7 +24,7 @@ def test_no_exit_4():
         assert binary_search([range(10)], 5, 6, 9) == -1
 
 def test_no_exit_5():
-	with raises(IndexError):
+    with raises(IndexError):
         assert binary_search([range(10)], 1, 2, 8) == -1
 
 def test_multiple():
