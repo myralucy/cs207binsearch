@@ -28,10 +28,10 @@ def test_no_exit_5():
         assert binary_search([range(10)], 1, 2, 8) == -1
 
 def test_multiple():
-    assert binary_search([1, 2, 2, 3, 3], 2) == 1
+    assert binary_search([1, 2, 2, 3, 3], 2) == 1 or binary_search([1, 2, 2, 3, 3], 2) == 2
 
 def test_multiple_2():
-    assert binary_search([1, 1, 2, 3, 3], 1) == 0
+    assert binary_search([1, 1, 2, 3, 3], 1) == 0 or assert binary_search([1, 1, 2, 3, 3], 1) == 1
 
 def test_border_1():
     assert binary_search([0, 1, 2, 3, 3], 0) == 0
