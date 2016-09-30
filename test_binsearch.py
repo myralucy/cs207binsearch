@@ -12,16 +12,20 @@ def test_no_exit_1():
     assert binary_search([5], 4) == -1
 
 def test_no_exit_2():
-    assert binary_search([range(10)], -1) == -1
+    with raises(TypeError):
+        assert binary_search([range(10)], -1) == -1
 
 def test_no_exit_3():
-    assert binary_search([range(10)], 3.5) == -1
+    with raises(TypeError):
+        assert binary_search([range(10)], 3.5) == -1
 
 def test_no_exit_4():
-    assert binary_search([range(10)], 5, 6, 9) == -1
+    with raises(IndexError):
+        assert binary_search([range(10)], 5, 6, 9) == -1
 
 def test_no_exit_5():
-    assert binary_search([range(10)], 1, 2, 8) == -1
+	with raises(IndexError):
+        assert binary_search([range(10)], 1, 2, 8) == -1
 
 def test_multiple():
     assert binary_search([1, 2, 2, 3, 3], 2) == 1
